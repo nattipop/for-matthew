@@ -15,7 +15,7 @@ const Tim = () => {
   })
   return (
     <div className="App" style={{flexDirection: "column"}}>
-      <iframe id="jtsys" width="250vw" height="auto" src="https://www.youtube.com/embed/EMlhAds4PWg?controls=0&mute=1" title="Just To See You Smile" frameBorder="0" allow="autoplay playsinline" allowFullScreen></iframe>
+      <iframe id="jtsys" width="250vw" height="auto" src="https://www.youtube.com/embed/EMlhAds4PWg?autoplay=1&controls=0&mute=1" title="Just To See You Smile" frameBorder="0" allow="autoplay playsinline" allowFullScreen></iframe>
       <div id="hack-div" onClick={() => navigate("/i_apologize")}></div>
       <h1>{`Choose how you will suffer for the next 3 minutes :)`}</h1>
     </div>
