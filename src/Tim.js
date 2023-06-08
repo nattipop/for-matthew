@@ -6,7 +6,7 @@ const Tim = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      document.getElementById("jtsys").src = "https://www.youtube.com/embed/EMlhAds4PWg?controls=0&autoplay=1&mute=0";
+      document.getElementById("jtsys").src = "https://www.youtube.com/embed/EMlhAds4PWg?controls=0&mute=0";
     }, 1000)
 
     setTimeout(() => {

@@ -6,7 +6,7 @@ const Dolly = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      document.getElementById("ninetofive").src = "https://www.youtube.com/embed/Lq1JD-bcGTo?controls=0&autoplay=1&mute=0";
+      document.getElementById("ninetofive").src = "https://www.youtube.com/embed/Lq1JD-bcGTo?controls=0&mute=0";
     }, 1000)
 
     setTimeout(() => {
