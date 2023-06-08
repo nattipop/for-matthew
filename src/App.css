@@ -56,9 +56,9 @@
   list-style: none;
   display: flex;
   height: 100vw;
-  width: 100vw;
+  width: 320px;
   position: fixed;
-  margin-left: 40px;
+  margin-left: 0px;
   margin-top: -80px;
   overflow: hidden;
 }
@@ -96,7 +96,7 @@ button:hover {
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   #slides {
     margin-top: 500px;
     width: 350px;
