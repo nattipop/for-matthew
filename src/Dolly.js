@@ -9,13 +9,13 @@ const Dolly = () => {
 
     setTimeout(() => {
       navigate("/congratulations")
-    }, 175000)
+    }, 180000)
   })
   return (
     <div className="App" style={{flexDirection: "column"}}>
       <iframe id="ninetofive" width="250vw" height="auto" src="https://www.youtube.com/embed/Lq1JD-bcGTo?controls=0" title="Dolly Parton - 9 To 5 (Lyrics)" frameBorder="0" allow="autoplay" allowFullScreen></iframe>
       <div id="hack-div" onClick={() => navigate("/i_still_love_you")}></div>
-      <h1>{`Choose which one you will suffer through :)`}</h1>
+      <h1>{`Choose which one you will suffer through for 3 minutes :)`}</h1>
     </div>
   )
 }

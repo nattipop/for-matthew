@@ -5,11 +5,7 @@
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  --marginA: 0px;
-  --marginB: -500px;
-  --marginC: -1000px;
-  --marginD: -1500px;
-  --marginE: -2000px;
+  color: #282c34;
 }
 
 .App-logo {
@@ -44,7 +40,9 @@
 
 #security-input {
   font-size: 30px;
-  margin: 10px;
+  margin: 20px;
+  border: solid 3px #282c34;
+  padding: 3px;
 }
 
 #hack-div {
@@ -60,65 +58,33 @@
   height: 100vw;
   width: 100vw;
   position: fixed;
-  margin-left: -200px;
+  margin-left: 40px;
+  margin-top: -80px;
   overflow: hidden;
 }
 
 .slides {
-  margin: 0px 50px;
+  margin-right: 50px;
+}
+.slides img {
+  width: 300px;
 }
 
 #first-slide {
-  margin-left: 45vw;
+  transition: margin-left 1s;
 }
 
 button {
-  font-size: 30px;
+  font-size: 23px;
+  padding: 6px;
+  background-color: #282c34;
+  color: white;
+  font-weight: bold;
 }
 
-@keyframes slidermotion {
-  from {
-    margin-left: 45vw;
-  }
-  to {
-    margin-left: -35vw;
-  }
-}
-
-@keyframes slidermotion2 {
-  from {
-    margin-left: -35vw;
-  }
-  to {
-    margin-left: -115vw;
-  }
-}
-
-@keyframes slidermotion3 {
-  from {
-    margin-left: -115vw;
-  }
-  to {
-    margin-left: -195vw;
-  }
-}
-
-@keyframes slidermotion4 {
-  from {
-    margin-left: -195vw;
-  }
-  to {
-    margin-left: -275vw;
-  }
-}
-
-@keyframes slidermotion5 {
-  from {
-    margin-left: -275vw;
-  }
-  to {
-    margin-left: -355vw;
-  }
+button:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px #74767a;
 }
 
 @keyframes App-logo-spin {
@@ -127,5 +93,13 @@ button {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 700px) {
+  #slides {
+    margin-top: 500px;
+    width: 350px;
+    margin-left: 0px;
   }
 }

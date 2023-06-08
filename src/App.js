@@ -9,10 +9,11 @@ function App() {
   let [message, setMessage] = useState("");
   const navigate = useNavigate();
   
-  const answerChecker = () => {
+  const answerChecker = (e) => {
+    e.preventDefault()
     const lowercase = inputValue.toLowerCase();
     if(lowercase === config.securityqanswer) {
-      document.body.style.backgroundColor = "rgb(149, 188, 149)"
+      document.body.style.backgroundColor = "rgb(197, 197, 197)";
       return navigate("/i_love_you")
     } else {
       document.body.style.backgroundColor = "red";
@@ -24,8 +25,7 @@ function App() {
   return (
     <div className="App">
       <div>
-        <h1>Hello!</h1>
-        <h3>Before we get started, a security question:</h3>
+        <h3>Security Question:</h3>
         <h3>What does Buttersnaps call me?</h3>
         <form>
           <input id="security-input" type="password" autoComplete="none" placeholder="Type Here" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
