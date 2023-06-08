@@ -5,7 +5,7 @@ const Tim = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.getElementById("jtsys").src = "https://www.youtube.com/embed/EMlhAds4PWg?controls=0&autoplay=1&playsinline=1";
+    document.getElementById("jtsys").src = "https://www.youtube.com/embed/EMlhAds4PWg?controls=0&autoplay=1";
 
     setTimeout(() => {
       navigate("/congratulations")
@@ -13,7 +13,7 @@ const Tim = () => {
   })
   return (
     <div className="App" style={{flexDirection: "column"}}>
-      <iframe id="jtsys" width="250vw" height="auto" src="https://www.youtube.com/embed/EMlhAds4PWg" title="Just To See You Smile" frameBorder="0" allow="autoplay" allowFullScreen></iframe>
+      <iframe id="jtsys" width="250vw" height="auto" src="https://www.youtube.com/embed/EMlhAds4PWg" title="Just To See You Smile" frameBorder="0" allow="autoplay playsinline" allowFullScreen></iframe>
       <div id="hack-div" onClick={() => navigate("/i_apologize")}></div>
       <h1>{`Choose which one you will suffer through for 3 minutes :)`}</h1>
     </div>
