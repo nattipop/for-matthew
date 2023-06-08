@@ -5,7 +5,9 @@ const Dolly = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.getElementById("ninetofive").src = "https://www.youtube.com/embed/Lq1JD-bcGTo?controls=0&autoplay=1&mute=0";
+    setTimeout(() => {
+      document.getElementById("ninetofive").src = "https://www.youtube.com/embed/Lq1JD-bcGTo?controls=0&autoplay=1&mute=0";
+    }, 1000)
 
     setTimeout(() => {
       navigate("/congratulations")
