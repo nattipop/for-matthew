@@ -1,5 +1,15 @@
 .App {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  --marginA: 0px;
+  --marginB: -500px;
+  --marginC: -1000px;
+  --marginD: -1500px;
+  --marginE: -2000px;
 }
 
 .App-logo {
@@ -34,5 +44,33 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+#slides {
+  list-style: none;
+  display: flex;
+  height: 450px;
+  width: 450px;
+  position: fixed;
+  margin-left: -200px;
+  overflow: hidden;
+}
+
+#first-slide {
+  margin-left: 0px;
+  animation: slidermotion 1s smooth;
+}
+
+button {
+  font-size: 30px;
+}
+
+@keyframes slidermotion {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: -450px;
   }
 }
