@@ -5,7 +5,7 @@ const Tim = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.getElementById("jtsys").src = "https://www.youtube.com/embed/EMlhAds4PWg?controls=0&autoplay=1";
+    document.getElementById("jtsys").src = "https://www.youtube.com/embed/EMlhAds4PWg?controls=0&autoplay=1&playsinline=1";
 
     setTimeout(() => {
       navigate("/congratulations")
