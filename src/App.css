@@ -21,6 +21,10 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+
+  .slides {
+    animation: slidermotion 1s smooth;
+  }
 }
 
 .App-header {
@@ -38,28 +42,34 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#security-input {
+  font-size: 30px;
+  margin: 10px;
+}
+
+#hack-div {
+  margin-top: -200px;
+  position: fixed;
+  height: 700px;
+  width: 100vw;
 }
 
 #slides {
   list-style: none;
   display: flex;
-  height: 450px;
-  width: 450px;
+  height: 100vw;
+  width: 100vw;
   position: fixed;
   margin-left: -200px;
   overflow: hidden;
 }
 
+.slides {
+  margin: 0px 50px;
+}
+
 #first-slide {
-  margin-left: 0px;
-  animation: slidermotion 1s smooth;
+  margin-left: 45vw;
 }
 
 button {
@@ -68,9 +78,54 @@ button {
 
 @keyframes slidermotion {
   from {
-    margin-left: 0px;
+    margin-left: 45vw;
   }
   to {
-    margin-left: -450px;
+    margin-left: -35vw;
+  }
+}
+
+@keyframes slidermotion2 {
+  from {
+    margin-left: -35vw;
+  }
+  to {
+    margin-left: -115vw;
+  }
+}
+
+@keyframes slidermotion3 {
+  from {
+    margin-left: -115vw;
+  }
+  to {
+    margin-left: -195vw;
+  }
+}
+
+@keyframes slidermotion4 {
+  from {
+    margin-left: -195vw;
+  }
+  to {
+    margin-left: -275vw;
+  }
+}
+
+@keyframes slidermotion5 {
+  from {
+    margin-left: -275vw;
+  }
+  to {
+    margin-left: -355vw;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

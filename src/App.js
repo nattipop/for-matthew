@@ -27,8 +27,10 @@ function App() {
         <h1>Hello!</h1>
         <h3>Before we get started, a security question:</h3>
         <h3>What does Buttersnaps call me?</h3>
-        <input id="security-input" type="password" placeholder='Type Here' value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
-        <button onClick={answerChecker}>Submit</button>
+        <form>
+          <input id="security-input" type="password" autoComplete="none" placeholder="Type Here" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+          <button onClick={answerChecker}>Submit</button>
+        </form>
         <h3>{message}</h3>
       </div>
     </div>
