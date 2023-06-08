@@ -5,9 +5,9 @@ const Dolly = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // setTimeout(() => {
-    //   document.getElementById("ninetofive").src = "https://www.youtube.com/embed/Lq1JD-bcGTo?controls=0&mute=0";
-    // }, 1000)
+    setTimeout(() => {
+      document.getElementById("ninetofive").src = "https://www.youtube.com/embed/Lq1JD-bcGTo?autoplay=0&disablekb=1&enablejsapi=1&loop=1&controls=0&mute=0";
+    }, 1000)
 
     setTimeout(() => {
       navigate("/congratulations")
@@ -15,7 +15,7 @@ const Dolly = () => {
   })
   return (
     <div className="App" style={{flexDirection: "column"}}>
-      <iframe id="ninetofive" width="250vw" height="auto" src="https://www.youtube.com/embed/Lq1JD-bcGTo?autoplay=1&disablekb=1&enablejsapi=1&loop=1&controls=0&mute=0" title="Dolly Parton - 9 To 5 (Lyrics)" frameBorder="0" allow="autoplay playsinline" allowFullScreen></iframe>
+      <iframe id="ninetofive" width="250vw" height="auto" src="https://www.youtube.com/embed/Lq1JD-bcGTo?autoplay=1&disablekb=1&enablejsapi=1&loop=1&controls=0&mute=1" title="Dolly Parton - 9 To 5 (Lyrics)" frameBorder="0" allow="autoplay playsinline" allowFullScreen></iframe>
       <div id="hack-div" onClick={() => navigate("/i_still_love_you")}></div>
       <h1>{`Choose how you will suffer for the next 3 minutes :)`}</h1>
     </div>
