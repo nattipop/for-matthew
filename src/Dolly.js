@@ -12,7 +12,10 @@ const Dolly = () => {
   })
   return (
     <div className="App" style={{flexDirection: "column"}}>
-      <YouTube videoId="Lq1JD-bcGTo" onReady={(e) => e.target.playVideo()} />
+      <YouTube videoId="Lq1JD-bcGTo" onReady={(e) => {
+        e.target.playVideo()
+        return e.target.unMute()
+      }} />
       <div id="hack-div" onClick={() => navigate("/i_still_love_you")}></div>
       <h1>{`Choose how you will suffer for the next 3 minutes :)`}</h1>
     </div>
