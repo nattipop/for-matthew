@@ -1,21 +1,18 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import YouTube from "react-youtube";
 
 const Tim = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => {
-      document.getElementById("jtsys").src = "https://www.youtube.com/embed/EMlhAds4PWg?controls=0&mute=0";
-    }, 1000)
-
-    setTimeout(() => {
       navigate("/congratulations")
     }, 180000)
   })
   return (
     <div className="App" style={{flexDirection: "column"}}>
-      <iframe id="jtsys" width="250vw" height="auto" src="https://www.youtube.com/embed/EMlhAds4PWg?autoplay=1&controls=0&mute=1" title="Just To See You Smile" frameBorder="0" allow="autoplay playsinline" allowFullScreen></iframe>
+      <YouTube videoId="EMlhAds4PWg" onReady={(e) => e.target.playVideo()} />
       <div id="hack-div" onClick={() => navigate("/i_apologize")}></div>
       <h1>{`Choose how you will suffer for the next 3 minutes :)`}</h1>
     </div>

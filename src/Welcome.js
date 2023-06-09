@@ -9,35 +9,44 @@ import { useNavigate } from "react-router-dom"
 
 const Welcome = () => {
   const [clicks, setClick] = useState(0);
-  const [message, setMessage] = useState("First");
+  const [message, setMessage] = useState("Hi");
   const navigate = useNavigate();
   
   const swipe = () => {
     if(clicks === 0){
-      setMessage("First of")
+      setMessage("April 27th, 2023")
       document.getElementById("first-slide").style.marginLeft = "-350px";
+      document.getElementById("root").style.backgroundColor = "rgb(116, 130, 255)";
     }
     if(clicks === 1){
-      setMessage("First of all,")
+      setMessage("May 6th, 2023")
       document.getElementById("first-slide").style.marginLeft = "-700px";
+      document.getElementById("root").style.backgroundColor = "rgb(80, 113, 80)";
     }
     if(clicks === 2){
-      setMessage("First of all, I")
+      setMessage("May 11th, 2023")
       document.getElementById("first-slide").style.marginLeft = "-1050px";
+      document.getElementById("root").style.backgroundColor = "rgb(213, 197, 166)";
     }
     if(clicks === 3){
-      setMessage("First of all, I love")
+      setMessage("May 18th, 2023")
       document.getElementById("first-slide").style.marginLeft = "-1400px";
+      document.getElementById("root").style.backgroundColor = "rgb(62, 45, 27)";
     }
     if(clicks === 4){
-      setMessage("First of all, I love you!")
+      setMessage("May 22nd, 2023")
       document.getElementById("first-slide").style.marginLeft = "-1750px";
+      document.getElementById("root").style.backgroundColor = "rgb(123, 152, 224)";
     }
     if(clicks === 5){
+      setMessage("")
       document.getElementById("first-slide").style.marginLeft = "-2100px";
+      document.getElementById("root").style.backgroundColor = "rgb(80, 113, 80)";
     }
     if(clicks > 5){
+      setMessage("Hi")
       document.getElementById("first-slide").style.marginLeft = "0px";
+      document.getElementById("root").style.backgroundColor = "rgb(197, 197, 197)";
       return setClick(0);
     }
 

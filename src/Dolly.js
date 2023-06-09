@@ -1,21 +1,22 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import YouTube from "react-youtube";
 
 const Dolly = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    setTimeout(() => {
-      document.getElementById("ninetofive").src = "https://www.youtube.com/embed/Lq1JD-bcGTo?autoplay=0&disablekb=1&enablejsapi=1&loop=1&controls=0&mute=0";
-    }, 1000)
+  const playVideo = (e) => {
+    e.target.playVideo()
+  }
 
+  useEffect(() => {
     setTimeout(() => {
       navigate("/congratulations")
     }, 180000)
   })
   return (
     <div className="App" style={{flexDirection: "column"}}>
-      <iframe id="ninetofive" width="250vw" height="auto" src="https://www.youtube.com/embed/Lq1JD-bcGTo?autoplay=1&disablekb=1&enablejsapi=1&loop=1&controls=0&mute=1" title="Dolly Parton - 9 To 5 (Lyrics)" frameBorder="0" allow="autoplay playsinline" allowFullScreen></iframe>
+      <YouTube videoId="Lq1JD-bcGTo" onReady={playVideo} />
       <div id="hack-div" onClick={() => navigate("/i_still_love_you")}></div>
       <h1>{`Choose how you will suffer for the next 3 minutes :)`}</h1>
     </div>
