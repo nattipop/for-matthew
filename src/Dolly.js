@@ -5,10 +5,6 @@ import YouTube from "react-youtube";
 const Dolly = () => {
   const navigate = useNavigate();
 
-  const playVideo = (e) => {
-    e.target.playVideo()
-  }
-
   useEffect(() => {
     setTimeout(() => {
       navigate("/congratulations")
@@ -16,7 +12,7 @@ const Dolly = () => {
   })
   return (
     <div className="App" style={{flexDirection: "column"}}>
-      <YouTube videoId="Lq1JD-bcGTo" onReady={playVideo} />
+      <YouTube videoId="Lq1JD-bcGTo" onReady={(e) => e.target.playVideo()} />
       <div id="hack-div" onClick={() => navigate("/i_still_love_you")}></div>
       <h1>{`Choose how you will suffer for the next 3 minutes :)`}</h1>
     </div>
