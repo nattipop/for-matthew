@@ -17,6 +17,7 @@ const Congrats = () => {
       <div id="congrats-slideshow">
         <Welcome newMessage={"I'll be adding more memories here <3"} />
       </div>
+      <h1 style={{color: "white"}}>Even though it's late, you should give me a call when you see this!</h1>
     </div>
   )
 }
