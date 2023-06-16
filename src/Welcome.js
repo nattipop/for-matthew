@@ -7,14 +7,18 @@ import chippewa from "./photos/70648946447__F47B5624-F8AC-4CDC-99B6-C9366229FF1D
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-const Welcome = () => {
+const Welcome = ({newMessage}) => {
   const [clicks, setClick] = useState(0);
   const [message, setMessage] = useState("Hi! Click the arrow to see all the pictures");
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.body.style.backgroundColor = "rgb(85, 119, 86)"
-  }, [])
+    if(newMessage) {
+      setMessage(newMessage)
+    } else {
+      document.body.style.backgroundColor = "rgb(85, 119, 86)"
+    }
+  }, [newMessage])
   
   const swipe = () => {
     if(clicks === 0){
@@ -41,9 +45,14 @@ const Welcome = () => {
       setMessage("")
       document.getElementById("first-slide").style.marginLeft = "-2100px";
     }
+    if(newMessage && clicks > 4){
+      setMessage("Love you!")
+      document.getElementById("first-slide").style.marginLeft = "50px";
+      return setClick(0);
+    }
     if(clicks > 5){
       setMessage("Hi")
-      document.getElementById("first-slide").style.marginLeft = "0px";
+      document.getElementById("first-slide").style.marginLeft = "50px";
       return setClick(0);
     }
 
@@ -53,7 +62,7 @@ const Welcome = () => {
     <div className="App">
       <h3 style={{marginTop: "-500px"}}>{message}</h3>
       <ul id="slides">
-        <li id="first-slide" className="slides"><img src={headshot} alt="" /></li>
+        <li id="first-slide" className="slides"><img width="300px" src={headshot} alt="" /></li>
         <li className="slides"><img src={spooner} alt=""/></li>
         <li className="slides"><img src={iceage} alt=""/></li>
         <li className="slides"><img src={dance} alt=""/></li>
@@ -61,7 +70,9 @@ const Welcome = () => {
         <li className="slides"><img src={chippewa} alt=""/></li>
         <li className="slides"><button style={{margin: "150px 55px"}} onClick={() => navigate("/i_apologize")}>Now Click Here</button></li>
       </ul>
-      <button style={{position: "fixed", marginTop: "500px"}} onClick={swipe}><img width="50px" src="https://www.freeiconspng.com/thumbs/arrow-icon/arrow-icon--myiconfinder-23.png" alt="" /></button>
+      <div style={{position: "absolute", marginTop: "500px"}}>
+        <button onClick={swipe}><img width="50px" src="https://www.freeiconspng.com/thumbs/arrow-icon/arrow-icon--myiconfinder-23.png" alt="" /></button>
+      </div>
     </div>
   )
 }
