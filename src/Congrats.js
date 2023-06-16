@@ -4,7 +4,7 @@ import Welcome from "./Welcome";
 
 const Congrats = () => {
   useEffect(() => {
-    document.body.style.backgroundColor = "#080f36";
+    document.body.style.backgroundColor = "#1c1e1f";
   }, [])
   return (
     <div className="App" style={{flexDirection: "column", height: "1000px"}}>
