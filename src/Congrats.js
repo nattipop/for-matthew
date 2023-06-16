@@ -8,7 +8,7 @@ const Congrats = () => {
   }, [])
   return (
     <div className="App" style={{flexDirection: "column", height: "1000px"}}>
-      <img src={d_t_logo} width="700px" alt="" style={{marginTop: "500px"}} />
+      <img src={d_t_logo} width="700px" alt="" style={{marginTop: "600px"}} />
       <div>
         <img src="https://media1.giphy.com/media/3SzZfnBD7FEWp78LiK/giphy.gif?cid=6c09b9525zlwvmp6dz95u4berl6sa0ec8y17ztrw9iqsd32w&ep=v1_stickers_related&rid=giphy.gif&ct=s" width="200px" alt="" />
         <h1 style={{color: "white"}}>You made it through!</h1>
