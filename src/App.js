@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <div className='box'>
         <h3>Security Question:</h3>
         <h3>What does Buttersnaps call me?</h3>
         <form>
